@@ -1,0 +1,23 @@
+{% extends 'guest_book/base.html' %}
+
+{% block content %}
+  <header>
+    <h1>שאלון</h1>
+  </header>
+  <div class="container">
+    <form method="post">
+        {% csrf_token %}
+        {% for field in form %}
+            <div class="question">
+                {{ field.label_tag }}
+                {{ field }}
+            </div>
+        {% endfor %}
+        <button type="submit"><i class="fas fa-paper-plane"></i> שלח</button>
+    </form>
+  </div>
+  <footer>
+    <p>© 2023 האתר שלי</p>
+  </footer>
+{% endblock %}
+

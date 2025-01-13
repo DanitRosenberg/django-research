@@ -1,0 +1,18 @@
+Help on package guest_book:
+
+NNAAMMEE
+    guest_book
+
+PPAACCKKAAGGEE  CCOONNTTEENNTTSS
+    admin
+    apps
+    forms
+    migrations (package)
+    models
+    tests
+    urls
+    views
+
+FFIILLEE
+    /home/ec2-user/mysite/guest_book/__init__.py
+

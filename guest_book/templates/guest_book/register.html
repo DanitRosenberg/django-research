@@ -1,0 +1,15 @@
+{% extends 'guest_book/base.html' %}
+
+{% block title %}
+    הרשמה
+{% endblock %}
+
+{% block content %}
+    <h2>הרשמה</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}  <!-- טופס ההרשמה עם תוויות בעברית -->
+        <button type="submit">הרשם</button>
+    </form>
+{% endblock %}
+

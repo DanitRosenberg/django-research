@@ -1,0 +1,18 @@
+<!-- register_user.html -->
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<html>
+<head>
+    <title>Register User</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Register User</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+

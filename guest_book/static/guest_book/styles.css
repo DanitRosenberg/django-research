@@ -1,0 +1,205 @@
+/* static/css/styles.css */
+/* עיצוב התפריט */
+.navbar {
+    list-style: none;  /* הסרת תבליטים של רשימה */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;  /* מיקום בצד ימין */
+    background-color: #1e1e1e;  /* צבע רקע כהה יותר */
+    padding: 15px 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* צל תחתון לתפריט */
+    position: sticky;  /* לשמור על התפריט בחלק העליון בזמן גלילה */
+    top: 0;
+    z-index: 1000;  /* כדי שהתפריט יישאר תמיד מעל התוכן */
+}
+
+/* עיצוב כל פריט בתפריט */
+.navbar li {
+    margin-left: 20px;  /* מרווח בין הכפתורים */
+}
+
+/* עיצוב הכפתורים */
+.navbar li a {
+    text-decoration: none;  /* הסרת קו תחתי */
+    color: white;  /* צבע טקסט לבן */
+    padding: 12px 25px;  /* ריווח פנימי לכפתור */
+    background: linear-gradient(135deg, #6a11cb, #2575fc);  /* מעבר צבעים (גרדיאנט) */
+    border-radius: 30px;  /* כפתורים עגולים */
+    font-family: 'Arial', sans-serif;  /* גופן פשוט */
+    font-size: 16px;  /* גודל טקסט נעים */
+    font-weight: bold;  /* טקסט מודגש */
+    transition: all 0.3s ease;  /* אנימציה לשינוי המראה */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);  /* צל לכפתורים */
+}
+
+/* עיצוב hover לכפתורים */
+.navbar li a:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);  /* שינוי הגרדיאנט בזמן מעבר עכבר */
+    transform: scale(1.05);  /* הגדלה קלה של הכפתור */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);  /* צל חזק יותר */
+}
+
+body {
+    font-family: 'Assistant', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    text-align: right;
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+}
+
+/* סגנון למיכל הראשי */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* סגנון לפסקאות */
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+/* סגנון לקישורים */
+a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* כותרת הדף */
+header h1 {
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-align: center;
+}
+}
+
+/* סגנון לשאלות */
+.question {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* תוויות השדות */
+.question label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+    font-size: 1.2em;
+    color: #34495e;
+}
+
+/* שדות הטופס */
+.question input[type="text"],
+.question textarea,
+.question select {
+    width: 100%;
+    padding: 12px 15px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+}
+
+/* כפתור השליחה */
+button[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.2em;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+/* אפקט ריחוף על הכפתור */
+button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* סגנון לטפסים */
+form {
+    background-color: #e9f7fd;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #d0e4f1;
+}
+
+/* סגנון לרדיו ולתיבות סימון */
+.question .checkbox,
+.question .radio {
+    margin-top: 10px;
+}
+
+.question .checkbox label,
+.question .radio label {
+    font-weight: normal;
+    font-size: 1em;
+}
+
+/* התאמת גודל השדה עבור תיבות בחירה */
+.question select {
+    height: 45px;
+}
+
+/* סגנון לכותרת עליונה */
+header {
+    background-color: #34495e;
+    color: white;
+    padding: 30px 0;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    font-weight: 300;
+}
+
+/* סגנון לפוטר (תחתית הדף) */
+footer {
+    background-color: #34495e;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.9em;
+}
+
+/* תגובה למסכים קטנים */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    button[type="submit"] {
+        font-size: 1em;
+    }
+}
+

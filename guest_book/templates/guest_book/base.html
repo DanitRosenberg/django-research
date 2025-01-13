@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}האתר שלי{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'guest_book/styles.css' %}">
+</head>
+<body>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
+

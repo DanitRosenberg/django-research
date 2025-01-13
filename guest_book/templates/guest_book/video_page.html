@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% load static %}
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio with Background Image</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("{% static 'image/s.jpeg' %}"); /* קישור לתמונה */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white; /* טקסט לבן על רקע כהה */
+        }
+        .audio-container {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* רקע שקוף מאחורי האודיו */
+            border-radius: 15px;
+            display: inline-block;
+        }
+        h1 {
+            text-shadow: 2px 2px 5px black; /* הצללה לטקסט */
+        }
+    </style>
+</head>
+<body>
+{% load static %}
+    <div class="container-fluid">
+        <h1 class="text-center mt-5">ניגון קובץ אודיו</h1>
+        <div class="text-center">
+            <div class="audio-container">
+                <!-- נגן האודיו -->
+                <audio controls>
+                    <source src="{% static 'audio/n.mp3' %}" type="audio/mpeg">
+                    הדפדפן שלך לא תומך בניגון קבצי אודיו.
+                </audio>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

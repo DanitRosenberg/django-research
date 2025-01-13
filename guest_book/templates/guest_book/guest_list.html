@@ -1,0 +1,33 @@
+{% extends 'guest_book/base.html' %}
+
+{% block title %}רשימת אורחים{% endblock %}
+
+{% block content %}
+<header>
+        <nav>
+            <ul class="navbar">
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'logout' %}" class="button">Logout</a></li>
+                {% else %}
+                    <li><a href="{% url 'login' %}" class="button">Login</a></li>
+                    <li><a href="{% url 'register' %}" class="button">Register</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+</header>
+<body>
+    {% if user.is_authenticated %}
+        <h2>ברוכ/ה הבא/ה {{ user.username }}</h2>
+	<p><a href="{% url 'questionnaire' %}">שאלון התאמה למחקר</a></p>
+        <!-- הקישורים המוגבלים למשתמשים רשומים -->
+        <p><a href="https://openuil.az1.qualtrics.com/jfe/form/SV_ex5II5YATuOIEtg?userName={{ user.username }}">עבור לשאלון מותאם</a></p>
+        <p><a href="https://openuil.az1.qualtrics.com/jfe/form/SV_bdpWG8eRebp75ie?userName={{ user.username }}-before">מטלה לפני שמיעת קטע</a></p>
+	<p><a href="{% url 'conditional_redirect' %}">שמיעת הקטע הנדרש</a></p>
+        <p><a href="https://openuil.az1.qualtrics.com/jfe/form/SV_bPzetlDjDT0JWn4?userName={{ user.username }}-after">מטלה אחרי קטע שמיעה</a></p>
+    {% else %}
+        <!-- הודעה למשתמשים לא רשומים -->
+        <p>יש להירשם או להתחבר כדי לגשת לקישורים.</p>
+    {% endif %}
+</body>
+{% endblock %}
+

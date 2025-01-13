@@ -1,0 +1,14 @@
+{% extends 'guest_book/base.html' %}
+
+{% block title %}
+    התחברות
+{% endblock %}
+
+{% block content %}
+    <h2>התחברות</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}  <!-- הצגת טופס ההתחברות -->
+        <button type="submit">התחבר</button>
+    </form>
+{% endblock %}
