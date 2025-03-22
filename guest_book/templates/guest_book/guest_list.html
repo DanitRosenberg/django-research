@@ -3,18 +3,6 @@
 {% block title %}רשימת אורחים{% endblock %}
 
 {% block content %}
-<header>
-        <nav>
-            <ul class="navbar">
-                {% if user.is_authenticated %}
-                    <li><a href="{% url 'logout' %}" class="button">Logout</a></li>
-                {% else %}
-                    <li><a href="{% url 'login' %}" class="button">Login</a></li>
-                    <li><a href="{% url 'register' %}" class="button">Register</a></li>
-                {% endif %}
-            </ul>
-        </nav>
-</header>
 <body>
     {% if user.is_authenticated %}
         <h2>ברוכ/ה הבא/ה {{ user.username }}</h2>

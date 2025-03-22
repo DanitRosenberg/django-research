@@ -1,0 +1,164 @@
+
+/* סגנון לשאלות */
+.question {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* תוויות השדות */
+.question label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+    font-size: 1.2em;
+    color: #34495e;
+}
+
+/* שדות הטופס */
+.question input[type="text"],
+.question textarea,
+.question select {
+    width: 100%;
+    padding: 12px 15px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+}
+
+/* כפתור השליחה */
+button[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.2em;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* סגנון לטפסים */
+form {
+    background-color: #e9f7fd;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #d0e4f1;
+}
+
+/* סגנון לרדיו ולתיבות סימון */
+.question .checkbox,
+.question .radio {
+    margin-top: 10px;
+}
+
+.question .checkbox label,
+.question .radio label {
+    font-weight: normal;
+    font-size: 1em;
+}
+
+/* התאמת גודל השדה עבור תיבות בחירה */
+.question select {
+    height: 45px;
+}
+
+/* --- סגנון לכותרת עליונה --- */
+/* --- סרגל ניווט --- */
+.navbar {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    margin: 0;
+    height: 60px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+/* לוגו */
+.navbar .logo {
+    margin-left: auto;
+}
+
+.navbar .logo img {
+    height: 60px;
+    max-width: 150px;
+    width: auto;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.navbar .logo img:hover {
+    transform: scale(1.05);
+}
+
+/* קישורים */
+.navbar li {
+    margin: 0 10px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* גוף האתר */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    direction: rtl;
+}
+
+/* ריווח מתחת לסרגל */
+main {
+    padding: 20px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+/* פוטר */
+footer {
+    background-color: #34495e;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* --- תגובה למסכים קטנים --- */
+@media screen and (max-width: 600px) {
+    .navbar .logo img {
+        height: 30px;
+    }
+    main {
+        margin-top: 70px;
+    }
+}
+

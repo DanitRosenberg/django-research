@@ -1,46 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
 {% load static %}
    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audio with Background Image</title>
+    <title>ניגון קובץ אודיו</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-image: url("{% static 'image/s.jpeg' %}"); /* קישור לתמונה */
+            background-image: url("{% static 'image/s.jpeg' %}");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            color: white; /* טקסט לבן על רקע כהה */
-        }
-        .audio-container {
+            color: white;
             text-align: center;
-            margin-top: 50px;
+            direction: rtl;
+        }
+
+        .audio-container {
+            margin: 50px auto 30px;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5); /* רקע שקוף מאחורי האודיו */
+            background-color: rgba(0, 0, 0, 0.6);
             border-radius: 15px;
             display: inline-block;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.6);
         }
+
         h1 {
-            text-shadow: 2px 2px 5px black; /* הצללה לטקסט */
+            margin-top: 50px;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        .instructions {
+            margin: 20px auto;
+            padding: 15px 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 12px;
+            width: fit-content;
+            max-width: 90%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+        }
+
+        .instructions p {
+            margin: 0;
+            font-size: 1.2em;
+            color: #fff;
+            text-shadow: 1px 1px 3px black;
+        }
+
+        .bottom-note {
+            margin: 40px auto 20px;
+            padding: 15px 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 12px;
+            width: fit-content;
+            max-width: 90%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+        }
+
+        .bottom-note p {
+            margin: 0;
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 1px 1px 3px black;
+        }
+
+        .bottom-note a {
+            color: #00ffff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .bottom-note a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
 {% load static %}
     <div class="container-fluid">
-        <h1 class="text-center mt-5">ניגון קובץ אודיו</h1>
-        <div class="text-center">
-            <div class="audio-container">
-                <!-- נגן האודיו -->
-                <audio controls>
-                    <source src="{% static 'audio/b.mp3' %}" type="audio/mpeg">
-                    הדפדפן שלך לא תומך בניגון קבצי אודיו.
-                </audio>
-            </div>
+        <h1>ניגון קובץ אודיו</h1>
+
+        <!-- קטע הוראות -->
+        <div class="instructions">
+           <p>אנא שב/י בבקשה. עצום/עצמי את העיניים והאזן/י לקובץ האודיו עד סופו. בסיום ההאזנה, תוכל/י להמשיך למשימה הבאה.</p>
         </div>
-    </div>
+
+        <div class="audio-container">
+            <!-- נגן האודיו -->
+            <audio controls>
+                <source src="{% static 'audio/b.mp3' %}" type="audio/mpeg">
+                הדפדפן שלך לא תומך בניגון קבצי אודיו.
+            </audio>
+        </div>
+
+        <!-- הודעה למטה עם קישור -->
+        <div class="bottom-note">
+            <p>לאחר סיום האזנה, ניתן להמשיך ל
+                <a href="https://openuil.az1.qualtrics.com/jfe/form/SV_bPzetlDjDT0JWn4?userName={{ user.username }}-after" target="_blank">מטלה הקוגניטיבית המסיימת</a>
+            </p>
+        </div>
+   </div>
 </body>
 </html>
 

@@ -14,6 +14,8 @@ urlpatterns = [
     path('login/', CustomLoginView.as_view(), name='login'),
     path('register/', register_view, name='register'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
+    path('success/', views.success_view, name='yes_redirect_page'),  # כל התשובות כן
+    path('failure/', views.failure_view, name='no_redirect_page'),  # יש תשובה לא
 ]
 
 

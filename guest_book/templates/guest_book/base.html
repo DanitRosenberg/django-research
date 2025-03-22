@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
@@ -7,8 +9,42 @@
     <link rel="stylesheet" href="{% static 'guest_book/styles.css' %}">
 </head>
 <body>
-    {% block content %}
-    {% endblock %}
+    <!-- סרגל ניווט קבוע עם לוגו -->
+    <header>
+        <nav>
+            <ul class="navbar">
+                <!-- לוגו מימין -->
+                <li class="logo">
+                    <a href="/">
+                        <img src="{% static 'image/p.jpg' %}" alt="לוגו האתר">
+                    </a>
+                </li>
+
+                <!-- קישורים לפי התחברות -->
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'logout' %}">התנתקות</a></li>
+                {% else %}
+                    <li><a href="{% url 'login' %}">התחברות</a></li>
+                    <li><a href="{% url 'register' %}">הרשמה</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+
+    <!-- תוכן הדף -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- פוטר (רשות, אפשר להסיר אם לא רוצים) -->
+<footer>
+    <div class="footer-container">
+        <p>כל הזכויות שמורות &copy; </p>        
+	<p><a href="mailto:danitrosenber@gmail.com">צור קשר</a></p>
+    </div>
+</footer>
+
 </body>
 </html>
 
