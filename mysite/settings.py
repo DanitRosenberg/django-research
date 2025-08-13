@@ -29,10 +29,10 @@ SECRET_KEY = 'django-insecure-8i%0&3a)))1nob5@o&g2920a^#mzt(o_wtet+l!te@9bjsge@4
 DEBUG = True
 
 #ALLOWED_HOSTS = [ '0.0.0.0' ]
-ALLOWED_HOSTS = [".localhost", "127.0.0.1", "[::1]", "54.194.236.83","universityresearchacademy.com"]
-CSRF_TRUSTED_ORIGINS= ["http://127.0.0.1", "http://54.194.236.83"]
+ALLOWED_HOSTS = [".localhost", "127.0.0.1", "[::1]", "34.243.184.25","universityresearchacademy.com"]
+CSRF_TRUSTED_ORIGINS= ["http://127.0.0.1", "http://34.243.184.25"]
 CSRF_TRUSTED_ORIGINS= ["http://universityresearchacademy.com", "http://universityresearchacademy.com"]
-CSRF_TRUSTED_ORIGINS= ["https://127.0.0.1", "https://54.194.236.83/"]
+CSRF_TRUSTED_ORIGINS= ["https://127.0.0.1", "https://34.243.184.25/"]
 CSRF_TRUSTED_ORIGINS= ["https://universityresearchacademy.com", "https://www.universityresearchacademy.com"]
 
 
